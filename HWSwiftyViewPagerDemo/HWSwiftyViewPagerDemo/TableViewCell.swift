@@ -32,8 +32,8 @@ class TableViewCell: UITableViewCell, UICollectionViewDataSource, HWSwiftyViewPa
     
     
     //MARK: HWSwiftyViewPagerDelegate
-    func pagerDidSelecedPage(selectedPage: Int) {
-        let string = "SelectedPage = \(selectedPage)"
+    func pager(pager: HWSwiftyViewPager, didSelectPageAtIndex index: Int) {
+        let string = "SelectedPage = \(index)"
         self.label.text = string
     }
     

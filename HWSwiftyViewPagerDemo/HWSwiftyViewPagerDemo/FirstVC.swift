@@ -32,17 +32,17 @@ class FirstVC: UIViewController, UICollectionViewDataSource, HWSwiftyViewPagerDe
     
     
     //MARK: HWSwiftyViewPagerDelegate
-    func pagerDidSelecedPage(selectedPage: Int) {
-        let string = "SectionInset Left,Right = 30\nminLineSpacing = 20\nSelectedPage = \(selectedPage)"
+    func pager(pager: HWSwiftyViewPager, didSelectPageAtIndex index: Int) {
+        let string = "SectionInset Left,Right = 30\nminLineSpacing = 20\nSelectedPage = \(index)"
         self.label.text = string
     }
 
     
     @IBAction func clickGoToPage0(sender: AnyObject) {
-        self.pager.setPage(pageNum: 0, isAnimation: false)
+        self.pager.setPage(pageNum: 0, animated: false)
     }
     
     @IBAction func clickGoToPage2(sender: AnyObject) {
-        self.pager.setPage(pageNum: 2, isAnimation: true)
+        self.pager.setPage(pageNum: 2, animated: true)
     }
 }

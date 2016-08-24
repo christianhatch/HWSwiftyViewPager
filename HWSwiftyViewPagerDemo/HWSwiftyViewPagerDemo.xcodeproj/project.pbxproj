@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4577D34E1D6D4117003C33DF /* ViewPagerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4577D34D1D6D4117003C33DF /* ViewPagerCell.xib */; };
+		4577D3511D6D413E003C33DF /* ViewPagerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577D3501D6D413E003C33DF /* ViewPagerCell.swift */; };
 		F53CB1B11C4DF269002EF4E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53CB1B01C4DF269002EF4E5 /* AppDelegate.swift */; };
-		F53CB1B31C4DF269002EF4E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53CB1B21C4DF269002EF4E5 /* ViewController.swift */; };
+		F53CB1B31C4DF269002EF4E5 /* ProgrammaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53CB1B21C4DF269002EF4E5 /* ProgrammaticViewController.swift */; };
 		F53CB1B61C4DF26A002EF4E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53CB1B41C4DF26A002EF4E5 /* Main.storyboard */; };
 		F53CB1B91C4DF26A002EF4E5 /* HWSwiftyViewPagerDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F53CB1B71C4DF26A002EF4E5 /* HWSwiftyViewPagerDemo.xcdatamodeld */; };
 		F53CB1BB1C4DF26A002EF4E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53CB1BA1C4DF26A002EF4E5 /* Assets.xcassets */; };
@@ -21,9 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4577D34D1D6D4117003C33DF /* ViewPagerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPagerCell.xib; sourceTree = "<group>"; };
+		4577D3501D6D413E003C33DF /* ViewPagerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPagerCell.swift; sourceTree = "<group>"; };
 		F53CB1AD1C4DF269002EF4E5 /* HWSwiftyViewPagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWSwiftyViewPagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53CB1B01C4DF269002EF4E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F53CB1B21C4DF269002EF4E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F53CB1B21C4DF269002EF4E5 /* ProgrammaticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticViewController.swift; sourceTree = "<group>"; };
 		F53CB1B51C4DF26A002EF4E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F53CB1B81C4DF26A002EF4E5 /* HWSwiftyViewPagerDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HWSwiftyViewPagerDemo.xcdatamodel; sourceTree = "<group>"; };
 		F53CB1BA1C4DF26A002EF4E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +51,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4577D34B1D6D2792003C33DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F53CB1BA1C4DF26A002EF4E5 /* Assets.xcassets */,
+				F53CB1BC1C4DF26A002EF4E5 /* LaunchScreen.storyboard */,
+				F53CB1BF1C4DF26A002EF4E5 /* Info.plist */,
+				F53CB1B71C4DF26A002EF4E5 /* HWSwiftyViewPagerDemo.xcdatamodeld */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4577D34C1D6D279E003C33DF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F53CB1C51C4DF2FC002EF4E5 /* FirstVC.swift */,
+				F53CB1C61C4DF2FC002EF4E5 /* SecondVC.swift */,
+				F53CB1C71C4DF2FC002EF4E5 /* ThirdVC.swift */,
+				F53CB1B21C4DF269002EF4E5 /* ProgrammaticViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4577D34F1D6D4120003C33DF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4577D3501D6D413E003C33DF /* ViewPagerCell.swift */,
+				4577D34D1D6D4117003C33DF /* ViewPagerCell.xib */,
+				F53CB1C81C4DF2FC002EF4E5 /* TableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		F53CB1A41C4DF269002EF4E5 = {
 			isa = PBXGroup;
 			children = (
@@ -67,17 +103,11 @@
 		F53CB1AF1C4DF269002EF4E5 /* HWSwiftyViewPagerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F53CB1C51C4DF2FC002EF4E5 /* FirstVC.swift */,
-				F53CB1C61C4DF2FC002EF4E5 /* SecondVC.swift */,
-				F53CB1C71C4DF2FC002EF4E5 /* ThirdVC.swift */,
-				F53CB1C81C4DF2FC002EF4E5 /* TableViewCell.swift */,
 				F53CB1B01C4DF269002EF4E5 /* AppDelegate.swift */,
-				F53CB1B21C4DF269002EF4E5 /* ViewController.swift */,
 				F53CB1B41C4DF26A002EF4E5 /* Main.storyboard */,
-				F53CB1BA1C4DF26A002EF4E5 /* Assets.xcassets */,
-				F53CB1BC1C4DF26A002EF4E5 /* LaunchScreen.storyboard */,
-				F53CB1BF1C4DF26A002EF4E5 /* Info.plist */,
-				F53CB1B71C4DF26A002EF4E5 /* HWSwiftyViewPagerDemo.xcdatamodeld */,
+				4577D34C1D6D279E003C33DF /* ViewControllers */,
+				4577D34F1D6D4120003C33DF /* Cells */,
+				4577D34B1D6D2792003C33DF /* Supporting Files */,
 			);
 			path = HWSwiftyViewPagerDemo;
 			sourceTree = "<group>";
@@ -148,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4577D34E1D6D4117003C33DF /* ViewPagerCell.xib in Resources */,
 				F53CB1BE1C4DF26A002EF4E5 /* LaunchScreen.storyboard in Resources */,
 				F53CB1BB1C4DF26A002EF4E5 /* Assets.xcassets in Resources */,
 				F53CB1B61C4DF26A002EF4E5 /* Main.storyboard in Resources */,
@@ -161,12 +192,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4577D3511D6D413E003C33DF /* ViewPagerCell.swift in Sources */,
 				F53CB1CB1C4DF2FC002EF4E5 /* ThirdVC.swift in Sources */,
 				F53CB1D11C4DF3AD002EF4E5 /* HWSwiftyViewPager.swift in Sources */,
 				F53CB1B91C4DF26A002EF4E5 /* HWSwiftyViewPagerDemo.xcdatamodeld in Sources */,
 				F53CB1CA1C4DF2FC002EF4E5 /* SecondVC.swift in Sources */,
 				F53CB1C91C4DF2FC002EF4E5 /* FirstVC.swift in Sources */,
-				F53CB1B31C4DF269002EF4E5 /* ViewController.swift in Sources */,
+				F53CB1B31C4DF269002EF4E5 /* ProgrammaticViewController.swift in Sources */,
 				F53CB1CC1C4DF2FC002EF4E5 /* TableViewCell.swift in Sources */,
 				F53CB1B11C4DF269002EF4E5 /* AppDelegate.swift in Sources */,
 			);

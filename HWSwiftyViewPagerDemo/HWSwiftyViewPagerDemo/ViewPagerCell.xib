@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ViewPagerCell" id="sOV-UK-q5y" customClass="ViewPagerCell" customModule="HWSwiftyViewPagerDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="356.5" height="314"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="356.5" height="314"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="8I6-3s-TCV">
+                        <rect key="frame" x="0.0" y="0.0" width="357" height="314"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottomMargin" secondItem="8I6-3s-TCV" secondAttribute="bottom" constant="-8" id="1hj-SG-sgc"/>
+                <constraint firstItem="8I6-3s-TCV" firstAttribute="leading" secondItem="sOV-UK-q5y" secondAttribute="leadingMargin" constant="-8" id="YLa-jk-4rh"/>
+                <constraint firstItem="8I6-3s-TCV" firstAttribute="top" secondItem="sOV-UK-q5y" secondAttribute="topMargin" constant="-8" id="kWR-ho-2J8"/>
+                <constraint firstAttribute="trailingMargin" secondItem="8I6-3s-TCV" secondAttribute="trailing" constant="-8" id="v83-q5-lb3"/>
+            </constraints>
+            <point key="canvasLocation" x="314.25" y="377"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Image" width="520" height="390"/>
+    </resources>
+</document>
