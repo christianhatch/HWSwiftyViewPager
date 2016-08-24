@@ -13,7 +13,7 @@ class ProgrammaticViewController: UIViewController {
     private lazy var viewPager: HWSwiftyViewPager = {
         let vp = HWSwiftyViewPager(frame: self.view.frame, itemSize: CGSize(width: 356.5, height: 314))
         vp.dataSource = self
-        vp.pageSelectedDelegate = self
+        vp.viewPagerDelegate = self
         vp.registerNib(UINib(nibName: "ViewPagerCell", bundle: nil), forCellWithReuseIdentifier: "ViewPagerCell")
         vp.backgroundColor = .grayColor()
         return vp

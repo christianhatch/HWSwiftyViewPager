@@ -16,6 +16,9 @@ public protocol HWSwiftyViewPagerDelegate {
 
 public class HWSwiftyViewPager: UICollectionView {
     
+    public var viewPagerDelegate: HWSwiftyViewPagerDelegate?
+
+
     enum PagerControlState: Int {
         case StayCurrent = 0
         case ToLeft = 1
@@ -31,8 +34,6 @@ public class HWSwiftyViewPager: UICollectionView {
     private var itemWidthWithMargin: CGFloat = 0
     private var scrollBeginOffset: CGFloat = 0
     private var pagerControlState = PagerControlState.StayCurrent
-    
-    var pageSelectedDelegate: HWSwiftyViewPagerDelegate?
     
 
     required public init?(coder aDecoder: NSCoder) {
@@ -111,7 +112,7 @@ extension HWSwiftyViewPager {
         let offset = getOffSetFromPage(pageNum, scrollView: self)
         setContentOffset(CGPointMake(offset, 0), animated: animated)
         selectedPageNum = pageNum
-        pageSelectedDelegate?.pager(self, didSelectPageAtIndex: pageNum)
+        viewPagerDelegate?.pager(self, didSelectPageAtIndex: pageNum)
     }
     
 }
@@ -158,11 +159,10 @@ extension HWSwiftyViewPager: UICollectionViewDelegate {
         }
         
         //페이지가 설정되었고, 델리게이트가 설정되었다면, 델리게이트를 호출한다.
-        pageSelectedDelegate?.pager(self, didSelectPageAtIndex: selectedPageNum)
+        viewPagerDelegate?.pager(self, didSelectPageAtIndex: selectedPageNum)
         
         point.x = getOffSetFromPage(selectedPageNum, scrollView: scrollView)
         targetContentOffset.memory = point
-        
     }
     
     //페이지 번호로 offset 을 구하기.
